@@ -33,10 +33,14 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Double.parseDouble(eOp1.getText().toString());
-                op2 = Double.parseDouble(eOp2.getText().toString());
-                result = op1 + op2;
-                tvResult.setText("Result : " + result);
+                if(eOp1.getText().toString().trim().length() > 0 && eOp2.getText().toString().trim().length() > 0) {
+                    op1 = Double.parseDouble(eOp1.getText().toString());
+                    op2 = Double.parseDouble(eOp2.getText().toString());
+                    result = op1 + op2;
+                    tvResult.setText("Result : " + result);
+                }
+                else
+                    tvResult.setText("Error : Operands not specified");
             }
         });
 
@@ -44,10 +48,14 @@ public class MainActivity extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Double.parseDouble(eOp1.getText().toString());
-                op2 = Double.parseDouble(eOp2.getText().toString());
-                result = op1 - op2;
-                tvResult.setText("Result : " + result);
+                if(eOp1.getText().toString().trim().length() > 0 && eOp2.getText().toString().trim().length() > 0) {
+                    op1 = Double.parseDouble(eOp1.getText().toString());
+                    op2 = Double.parseDouble(eOp2.getText().toString());
+                    result = op1 - op2;
+                    tvResult.setText("Result : " + result);
+                }
+                else
+                    tvResult.setText("Error : Operands not specified");
             }
         });
 
@@ -55,10 +63,15 @@ public class MainActivity extends AppCompatActivity {
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Double.parseDouble(eOp1.getText().toString());
-                op2 = Double.parseDouble(eOp2.getText().toString());
-                result = op1 * op2;
-                tvResult.setText("Result : " + result);
+                if(eOp1.getText().toString().trim().length() > 0 && eOp2.getText().toString().trim().length() > 0) {
+                    op1 = Double.parseDouble(eOp1.getText().toString());
+                    op2 = Double.parseDouble(eOp2.getText().toString());
+                    result = op1 * op2;
+                    tvResult.setText("Result : " + result);
+                }
+                else
+                    tvResult.setText("Error : Operands not specified");
+
             }
         });
 
@@ -66,10 +79,18 @@ public class MainActivity extends AppCompatActivity {
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Double.parseDouble(eOp1.getText().toString());
-                op2 = Double.parseDouble(eOp2.getText().toString());
-                result = op1 / op2;
-                tvResult.setText("Result : " + result);
+                if(eOp1.getText().toString().trim().length() > 0 && eOp2.getText().toString().trim().length() > 0) {
+                    op1 = Double.parseDouble(eOp1.getText().toString());
+                    op2 = Double.parseDouble(eOp2.getText().toString());
+                    if (op2 == 0)
+                        tvResult.setText("Error : Cannot divide by zero");
+                    else {
+                        result = op1 / op2;
+                        tvResult.setText("Result : " + result);
+                    }
+                }
+                else
+                    tvResult.setText("Error : Operands not specified");
             }
         });
     }
