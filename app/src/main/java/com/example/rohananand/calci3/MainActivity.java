@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Integer.parseInt(eOp1.getText().toString());
-                op2 = Integer.parseInt(eOp2.getText().toString());
+                op1 = Double.parseDouble(eOp1.getText().toString());
+                op2 = Double.parseDouble(eOp2.getText().toString());
                 result = op1 + op2;
                 tvResult.setText("Result : " + result);
             }
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Integer.parseInt(eOp1.getText().toString());
-                op2 = Integer.parseInt(eOp2.getText().toString());
+                op1 = Double.parseDouble(eOp1.getText().toString());
+                op2 = Double.parseDouble(eOp2.getText().toString());
                 result = op1 - op2;
                 tvResult.setText("Result : " + result);
             }
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Integer.parseInt(eOp1.getText().toString());
-                op2 = Integer.parseInt(eOp2.getText().toString());
+                op1 = Double.parseDouble(eOp1.getText().toString());
+                op2 = Double.parseDouble(eOp2.getText().toString());
                 result = op1 * op2;
                 tvResult.setText("Result : " + result);
             }
@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                op1 = Integer.parseInt(eOp1.getText().toString());
-                op2 = Integer.parseInt(eOp2.getText().toString());
+                op1 = Double.parseDouble(eOp1.getText().toString());
+                op2 = Double.parseDouble(eOp2.getText().toString());
                 result = op1 / op2;
                 tvResult.setText("Result : " + result);
             }
